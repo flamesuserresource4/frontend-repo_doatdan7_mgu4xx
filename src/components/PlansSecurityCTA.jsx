@@ -27,36 +27,36 @@ const tiers = [
 
 const PlansSecurityCTA = () => {
   return (
-    <section id="pricing" className="bg-white py-20">
+    <section id="pricing" className="bg-[#0a0d12] py-20">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Simple, transparent pricing</h2>
-          <p className="mt-4 text-gray-600">Get started today. Scale as your practice grows.</p>
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Simple, transparent pricing</h2>
+          <p className="mt-4 text-slate-300">Get started today. Scale as your practice grows.</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
           {tiers.map((t) => (
             <div
               key={t.name}
-              className={`${t.highlight ? 'border-blue-600 ring-1 ring-blue-600' : 'border-gray-200'} rounded-2xl border bg-white p-6 shadow-sm`}
+              className={`${t.highlight ? 'border-amber-400/60 ring-1 ring-amber-400/60' : 'border-white/10'} rounded-2xl border bg-white/5 p-6 shadow-sm`}
             >
               <div className="flex items-baseline justify-between">
-                <h3 className="text-lg font-semibold text-gray-900">{t.name}</h3>
+                <h3 className="text-lg font-semibold text-white">{t.name}</h3>
                 {t.highlight && (
-                  <span className="rounded-full bg-blue-50 px-3 py-1 text-xs font-medium text-blue-700">Most popular</span>
+                  <span className="rounded-full bg-amber-400/15 px-3 py-1 text-xs font-medium text-amber-300">Most popular</span>
                 )}
               </div>
-              <p className="mt-4 text-3xl font-bold text-gray-900">{t.price}</p>
+              <p className="mt-4 text-3xl font-bold text-white">{t.price}</p>
               <ul className="mt-6 space-y-3">
                 {t.features.map((f) => (
-                  <li key={f} className="flex items-start gap-3 text-gray-700">
-                    <Check className="mt-0.5 h-4 w-4 text-blue-600" /> {f}
+                  <li key={f} className="flex items-start gap-3 text-slate-200">
+                    <Check className="mt-0.5 h-4 w-4 text-amber-300" /> {f}
                   </li>
                 ))}
               </ul>
               <a
                 href="#"
-                className={`mt-6 inline-flex w-full items-center justify-center rounded-lg px-4 py-2 font-medium transition ${t.highlight ? 'bg-blue-600 text-white hover:bg-blue-700' : 'bg-blue-50 text-blue-700 hover:bg-blue-100'}`}
+                className={`mt-6 inline-flex w-full items-center justify-center rounded-lg px-4 py-2 font-medium transition ${t.highlight ? 'bg-amber-400 text-[#0a0d12] hover:bg-amber-300' : 'bg-white/10 text-white hover:bg-white/15'}`}
               >
                 {t.cta}
               </a>
@@ -64,10 +64,10 @@ const PlansSecurityCTA = () => {
           ))}
         </div>
 
-        <div className="mt-20 rounded-2xl border border-gray-200 bg-white p-8">
+        <div id="security" className="mt-20 rounded-2xl border border-white/10 bg-white/5 p-8">
           <div className="mx-auto max-w-4xl text-center">
-            <h3 className="text-2xl font-semibold text-gray-900">Security & Compliance</h3>
-            <p className="mt-2 text-gray-600">Your data, protected at every level.</p>
+            <h3 className="text-2xl font-semibold text-white">Security & Compliance</h3>
+            <p className="mt-2 text-slate-300">Your data, protected at every level.</p>
           </div>
           <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
@@ -76,59 +76,59 @@ const PlansSecurityCTA = () => {
               { icon: KeyRound, title: 'Encrypted data storage' },
               { icon: Shield, title: 'Role-based access control' },
             ].map(({ icon: Icon, title }) => (
-              <div key={title} className="flex items-center gap-3 rounded-xl border border-blue-100 bg-blue-50/50 p-4">
-                <Icon className="h-5 w-5 text-blue-700" />
-                <span className="text-sm font-medium text-gray-900">{title}</span>
+              <div key={title} className="flex items-center gap-3 rounded-xl border border-amber-400/20 bg-amber-400/10 p-4">
+                <Icon className="h-5 w-5 text-amber-300" />
+                <span className="text-sm font-medium text-white">{title}</span>
               </div>
             ))}
           </div>
         </div>
 
-        <div className="mx-auto mt-16 max-w-4xl rounded-2xl bg-gradient-to-r from-blue-600 to-blue-700 p-8 text-center text-white">
+        <div className="mx-auto mt-16 max-w-4xl rounded-2xl bg-gradient-to-r from-amber-500 to-amber-400 p-8 text-center text-[#0a0d12] shadow-[0_0_40px_#f59e0b40]">
           <h3 className="text-2xl font-semibold">Experience the Future of Legal CRM</h3>
-          <p className="mt-2 text-blue-100">Join hundreds of law firms optimizing their workflow with Prolex.ai.</p>
+          <p className="mt-2 text-amber-950/80">Join growing firms optimizing their workflow with Prolex.ai.</p>
           <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <a href="#" className="inline-flex items-center justify-center rounded-lg bg-white px-5 py-2 font-medium text-blue-700 shadow-sm transition hover:bg-blue-50">
+            <a href="#" className="inline-flex items-center justify-center rounded-lg bg-[#0a0d12] px-5 py-2 font-medium text-white transition hover:bg-black">
               Start Free Trial
             </a>
-            <a href="#contact" className="inline-flex items-center justify-center rounded-lg bg-blue-500/20 px-5 py-2 font-medium text-white ring-1 ring-white/30 transition hover:bg-blue-500/30">
+            <a href="#contact" className="inline-flex items-center justify-center rounded-lg bg-white/20 px-5 py-2 font-medium text-[#0a0d12] ring-1 ring-black/10 transition hover:bg-white/30">
               Schedule a Demo
             </a>
           </div>
         </div>
 
-        <footer className="mt-20 border-t border-gray-200 pt-10 text-sm text-gray-600">
+        <footer className="mt-20 border-t border-white/10 pt-10 text-sm text-slate-300">
           <div className="grid grid-cols-2 gap-6 sm:grid-cols-4">
             <div className="space-y-3">
-              <p className="font-semibold text-gray-900">Product</p>
-              <a href="#" className="block hover:text-gray-900">Features</a>
-              <a href="#pricing" className="block hover:text-gray-900">Pricing</a>
-              <a href="#" className="block hover:text-gray-900">Integrations</a>
+              <p className="font-semibold text-white">Product</p>
+              <a href="#features" className="block hover:text-white">Features</a>
+              <a href="#pricing" className="block hover:text-white">Pricing</a>
+              <a href="#showcase" className="block hover:text-white">Showcase</a>
             </div>
             <div className="space-y-3">
-              <p className="font-semibold text-gray-900">Company</p>
-              <a href="#" className="block hover:text-gray-900">About</a>
-              <a href="#" className="block hover:text-gray-900">Careers</a>
-              <a href="#" className="block hover:text-gray-900">Blog</a>
+              <p className="font-semibold text-white">Company</p>
+              <a href="#" className="block hover:text-white">About</a>
+              <a href="#" className="block hover:text-white">Careers</a>
+              <a href="#" className="block hover:text-white">Blog</a>
             </div>
             <div className="space-y-3">
-              <p className="font-semibold text-gray-900">Resources</p>
-              <a href="#" className="block hover:text-gray-900">Help Center</a>
-              <a href="#" className="block hover:text-gray-900">Documentation</a>
-              <a href="#" className="block hover:text-gray-900">Status</a>
+              <p className="font-semibold text-white">Resources</p>
+              <a href="#" className="block hover:text-white">Help Center</a>
+              <a href="#" className="block hover:text-white">Documentation</a>
+              <a href="#" className="block hover:text-white">Status</a>
             </div>
             <div className="space-y-3">
-              <p className="font-semibold text-gray-900">Contact</p>
-              <a href="mailto:contact@prolex.ai" className="block hover:text-gray-900">contact@prolex.ai</a>
-              <div className="text-gray-500">LinkedIn • X • YouTube</div>
+              <p className="font-semibold text-white">Contact</p>
+              <a href="mailto:contact@prolex.ai" className="block hover:text-white">contact@prolex.ai</a>
+              <div className="text-slate-400">LinkedIn • X • YouTube</div>
             </div>
           </div>
-          <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-gray-200 pt-6 text-center sm:flex-row">
-            <p className="text-gray-500">© 2025 Prolex.ai. All rights reserved.</p>
+          <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 text-center sm:flex-row">
+            <p className="text-slate-400">© 2025 Prolex.ai. All rights reserved.</p>
             <div className="space-x-4">
-              <a href="#" className="hover:text-gray-900">Privacy</a>
-              <a href="#" className="hover:text-gray-900">Terms</a>
-              <a href="#" className="hover:text-gray-900">Security</a>
+              <a href="#" className="hover:text-white">Privacy</a>
+              <a href="#" className="hover:text-white">Terms</a>
+              <a href="#" className="hover:text-white">Security</a>
             </div>
           </div>
         </footer>
